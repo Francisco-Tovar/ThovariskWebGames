@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Thovarisk • Games</title>
+    <meta name="description" content="Thovarisk game showcase." />
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;800;900&family=Fredoka:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+
+    <header class="top">
+      <div class="top__inner">
+        <a class="logo" href="#/games" aria-label="Thovarisk Home">
+          <img
+            class="logo_image"
+            src="./assets/thovarisklogo.png"
+            alt="THOVARISK"
+          />
+        </a>
+
+        <nav class="nav" aria-label="Primary">
+          <a class="nav__link" href="#/games" data-route="games">Games</a>
+          <a class="nav__link" href="#/about" data-route="about">About</a>
+        </nav>
+
+        <div class="top__actions">
+          <button
+            class="iconbtn"
+            id="themeBtn"
+            type="button"
+            aria-label="Toggle theme"
+          >
+            <span aria-hidden="true" id="themeGlyph">◐</span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <div class="notice" role="note">
+      <div class="notice__inner">
+        <span style="color: #f6f9fb" class="notice__spark" aria-hidden="true"
+          >✦</span
+        >
+        <span style="color: #f6f9fb">
+          New games drop here. Click <strong>Play</strong> to jump in.
+        </span>
+      </div>
+    </div>
+    <main id="main" class="main">
+      <section class="toolbar">
+        <div class="toolbar__left">
+          <h1 class="title" id="viewTitle">Games</h1>
+          <p class="subtitle" id="viewHint">
+            A tidy collection of my web games.
+          </p>
+        </div>
+
+        <div class="toolbar__right">
+          <div class="search">
+            <input
+              id="searchInput"
+              type="search"
+              placeholder="Search…"
+              autocomplete="off"
+              spellcheck="false"
+            />
+          </div>
+
+          <select id="sortSelect" class="select" aria-label="Sort games">
+            <option value="newest">Newest</option>
+            <option value="az">A → Z</option>
+            <option value="featured">Featured</option>
+            <option value="playtime">Playtime</option>
+          </select>
+        </div>
+      </section>
+
+      <section id="app" class="grid-wrap" aria-live="polite"></section>
+
+      <footer class="footer">
+        <div class="footer__inner">
+          <div class="footer__left">
+            <div class="footer__meta">
+              © 2025 by Thovarisk - All rights reserved.
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <dialog class="modal" id="gameModal">
+      <form method="dialog" class="modal__card">
+        <div class="modal__top">
+          <div class="modal__badge" id="modalBadge">Game</div>
+          <button class="iconbtn" aria-label="Close">
+            <span aria-hidden="true">✕</span>
+          </button>
+        </div>
+
+        <div class="modal__body">
+          <h3 class="modal__title" id="modalTitle"></h3>
+          <p class="modal__desc" id="modalDesc"></p>
+
+          <div class="modal__meta" id="modalMeta"></div>
+
+          <div class="modal__actions">
+            <a
+              class="btn btn--primary"
+              id="modalPlay"
+              target="_blank"
+              rel="noopener"
+              >Play</a
+            >
+            <a class="btn" id="modalSource" target="_blank" rel="noopener"
+              >Source</a
+            >
+            <button class="btn" id="modalCopy" type="button">Copy link</button>
+          </div>
+        </div>
+      </form>
+    </dialog>
+
+    <script src="./games.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
