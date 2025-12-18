@@ -5,7 +5,7 @@ window.GAMES = [
     description:
       "A short description that makes people click. Original by Benjamin Anderson.",
     url: "https://francisco-tovar.github.io/BlasterFaster/",
-    cover: "./assets/blasterfastercover.png",
+    cover: "./assets/BlasterFasterCover.png",
     priceTag: "Free",
     platform: "Browser & Mobile",
     stores: [
@@ -41,7 +41,7 @@ window.GAMES = [
     title: "NewtonRoids",
     description: "A physics space shooter with simple mechanics",
     url: "https://francisco-tovar.github.io/NewtonRoidsWeb/index.html",
-    cover: "./assets/newtonroidscover.png",
+    cover: "./assets/Newtonroidscover.png",
     priceTag: "Free",
     platform: "Browser",
     stores: [
