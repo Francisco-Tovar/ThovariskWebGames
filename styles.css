@@ -88,13 +88,17 @@ body {
   align-items: center;
   justify-content: space-between;
   gap: 16px;
+  flex-wrap: wrap;
 }
 .logo_image {
   width: auto;
   height: 150px;
 }
 .logo {
-  display: flex;
+  min-width: 0;
+  max-width: min(240px, 80vw);
+  height: auto;
+  display: block;
   align-items: center;
   gap: 10px;
   text-decoration: none;
@@ -505,4 +509,67 @@ body {
 
 [data-theme="dark"] .soft-link {
   border-bottom-color: rgba(255, 255, 255, 0.25);
+}
+@media (max-width: 640px) {
+  .top__inner {
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .logo {
+    width: 100%;
+    justify-content: center; /* center logo on its own row */
+  }
+
+  .nav {
+    width: auto;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .top__actions {
+    width: auto;
+    justify-content: center;
+  }
+  .nav__link {
+    padding: 8px 4px;
+  }
+}
+
+@media (max-width: 720px) {
+  .top__inner {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+      "logo actions"
+      "nav  nav";
+    align-items: center;
+    gap: 10px;
+  }
+
+  .logo {
+    grid-area: logo;
+    min-width: 0; /* ✅ allows shrink */
+  }
+
+  /* If the logo is an <img> */
+  .logo img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .top__actions {
+    grid-area: actions;
+    justify-self: end;
+  }
+
+  .nav {
+    grid-area: nav;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px;
+    padding-bottom: 2px;
+  }
 }

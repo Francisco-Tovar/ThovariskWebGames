@@ -213,14 +213,16 @@
           </div>
         </div>
         <br/>
-        <div class="about-cta">
+        
+        <div class="about-cta" style="text-align: center;">
           <img
             src="./assets/portfolio.png"
             alt="Portfolio"
             width="100"
             height="100"
-            style="vertical-align: middle; margin-right: 10px; margin-left: 80px;"
+            style="vertical-align: middle; margin-right: 10px;"
           />
+          <br/>
           <a
             style=" font-size: 24px;"
             class="about-primary"
@@ -229,15 +231,18 @@
             rel="noopener"
           >
           
-            View my full portfolio
+            My portfolio
           </a>
+          <br/>
+          <br/>
           <img
             src="./assets/github.png"
             alt="Portfolio"
             width="100"
             height="100"
-            style="vertical-align: middle; margin-right: 10px; margin-left: 80px;"
+            style="vertical-align: middle; margin-right: 10px;"
           />
+          <br/>
           <a
             style=" font-size: 24px;"
             class="about-secondary"
@@ -245,7 +250,7 @@
             target="_blank"
             rel="noopener"
           >
-            Browse code on GitHub
+            Code on GitHub
           </a>
         </div>
 
