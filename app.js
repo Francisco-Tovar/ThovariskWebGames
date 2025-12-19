@@ -162,25 +162,95 @@
 
   function renderAbout() {
     viewTitle.textContent = "About";
-    viewHint.textContent = "A little about me.";
+    viewHint.textContent = "Why Thovarisk exists (and what you’ll find here).";
     setActiveNav("about");
 
     app.innerHTML = `
-    <div class="empty" style="max-width: 80ch;">
-      <p><strong>Thovarisk</strong> is my lightweight catalog for small web projects, games and experiments.</p>
+    <section class="about-hero">
+      <div class="about-card">
+        <div class="about-badge">THOVARISK • ARCADE CATALOG</div>
 
-      <p>
-        You can see my full developer portfolio here:
-        <a
-          class="soft-link"
-          href="https://frantovardev.github.io/PORTAFOLIO/index.html#portafolio"
-          target="_blank"
-          rel="noopener"
-        >
-         MY PORTFOLIO
-        </a>
-      </p>
-    </div>
+        <h2 class="about-title">
+          Small projects. Fast ideas. Shippable builds.
+        </h2>
+
+        <p class="about-lead">
+          <strong>Thovarisk</strong> is my launchpad for web games, prototypes, and experiments—
+          each one designed to be <strong>playable</strong>, <strong>shareable</strong>, and <strong>easy to explore</strong>.
+        </p>
+
+        <div class="about-grid">
+          <div class="about-panel">
+            <h3 class="about-h3">What you’ll find</h3>
+            <ul class="about-list">
+              <li><strong>Playable demos</strong> with clean UI and quick onboarding</li>
+              <li><strong>Experiments</strong> in interaction, animation, and game feel</li>
+              <li><strong>Source links</strong> to learn from implementation details</li>
+            </ul>
+          </div>
+
+          <div class="about-panel">
+            <h3 class="about-h3">Why it matters</h3>
+            <p class="about-text">
+              Anyone can list skills. I prefer to show <strong>working software</strong>:
+              decisions, polish, and iteration—end-to-end.
+            </p>
+
+            <div class="about-stats">
+              <div class="stat">
+                <div class="stat-k">Games</div>
+                <div class="stat-v">Playable</div>
+              </div>
+              <div class="stat">
+                <div class="stat-k">Builds</div>
+                <div class="stat-v">Fast</div>
+              </div>
+              <div class="stat">
+                <div class="stat-k">Focus</div>
+                <div class="stat-v">Polish</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br/>
+        <div class="about-cta">
+          <img
+            src="./assets/portfolio.png"
+            alt="Portfolio"
+            width="100"
+            height="100"
+            style="vertical-align: middle; margin-right: 10px; margin-left: 80px;"
+          />
+          <a
+            style=" font-size: 24px;"
+            class="about-primary"
+            href="https://francisco-tovar.github.io/PORTAFOLIO/index.html"
+            target="_blank"
+            rel="noopener"
+          >
+          
+            View my full portfolio
+          </a>
+          <img
+            src="./assets/github.png"
+            alt="Portfolio"
+            width="100"
+            height="100"
+            style="vertical-align: middle; margin-right: 10px; margin-left: 80px;"
+          />
+          <a
+            style=" font-size: 24px;"
+            class="about-secondary"
+            href="https://github.com/Francisco-Tovar"
+            target="_blank"
+            rel="noopener"
+          >
+            Browse code on GitHub
+          </a>
+        </div>
+
+      </div>
+    </section>
   `;
   }
 
